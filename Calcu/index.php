@@ -8,13 +8,17 @@
     </head>
     <body>
         <form action="action.php" method="post">
-            <label for="name">Your name</label>
-            <input name="name" id="name" type="text">
+            <label for="n1">First Number</label>
+            <input name="n1" id="n1" type="number">
 
-            <label for="age">Your age:</label>
-            <input name="age" id="age" type="number">
+            <label for="n2">Second Number:</label>
+            <input name="n2" id="n2" type="number">
+            <p name="result" id="result"></p>
 
-            <button type="submit">Submit</button>
+            <button type="add">Addition</button>
+            <button type="subtract">Subtraction</button>
+            <button type="multiply">Multiplication</button>
+            <button type="divide">Division</button>
         </form>
     </body>
 </html>

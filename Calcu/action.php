@@ -7,11 +7,16 @@
         <title>Document</title>
     </head>
     <body>
-        Hi <?php
-        echo ($_POST['name']);
+
+        The  <?php
+        echo (int)$_POST['n1'];
         ?>
-        You are <?php
-        echo (int)$_POST['age'];
-        ?> years old.
+        and  <?php
+        echo (int)$_POST['n2'];
+        ?> 
+        is 
+
+
+
     </body>
 </html>
