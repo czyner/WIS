@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html><head>
-    <link rel="stylesheet" href="UserLoginSignupPage.css">
+    <link rel="stylesheet" href="Zarate_FinalProject.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,400&amp;display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway:700&amp;display=swap" rel="stylesheet">
@@ -38,7 +38,7 @@
             <input type="text" name="Username" class="input-field" placeholder="Username" required></input>
             <input type="email" name="SignupEmail" class="input-field" placeholder="Email" required></input>
             <input type="text" name="SignupPassword" class="input-field" placeholder="Password" required></input>
-            <button type="submit" class="userSignupSubmitBtn"><a href="SignupAfterSubmit.php">Signup</a></button>
+            <button type="submit" class="userSignupSubmitBtn">Signup</button>
         </form>
         <form id="userLogin" class="input-group" action="setup.php" method="POST">
             <!--<input type="email" name="LoginEmail" class="input-field" placeholder="Email" required></input>

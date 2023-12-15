@@ -6,8 +6,9 @@
     
   </head>
   <body data-new-gr-c-s-check-loaded="14.1086.0" data-gr-ext-installed="">
-    <!-- START NAV -->   
-   <?php 
+  <p>VIEW STUDENT</p>
+  <button type="submit"><a href= "../User/UserDashboard.php">Go Back</a></button>
+  <?php
         $servername = "localhost"; 
         $username = "root"; 
         $password = ""; 
@@ -21,20 +22,20 @@
             die("Connection failed: " . $conn->connect_error);
         }
         $retval = mysqli_select_db( $conn, 'Zarate' );
+        // Select data
+        $sql = "SELECT StudentID, Firstname, Lastname, DateOfBirth, Email, Phone FROM student";
+        $result = $conn->query($sql);
 
-        // Insert Into Tables
-        $id = rand(100000,999999);
-        $name = $_POST['Username'];
-        $email = $_POST['SignupEmail'];
-        $password = $_POST['SignupPassword'];
-        
-        $sql = "INSERT INTO users (UserID, username, email, Password) VALUES ('$id', '$name', '$email', '$password')";
-        if ($conn->query($sql) === TRUE) {
-            echo "Account created successfully";
+        if ($result->num_rows > 0) {
+            while($row = $result->fetch_assoc()) {
+                echo "<br> ID: " . $row["StudentID"]. " - Username: " . $row["Firstname"]. "- Lastname". $row["Lastname"]. "- Date of Birth". $row["DateOfBirth"]." - Email: " . $row["Email"]. "- Phone". $row["Phone"]. "<br>";
+            }
         } else {
-            echo "Error: " . $sql . "<br>" . $conn->error;
+            echo "0 results";
         }
+    // Close connection
+    $conn->close();
     ?>
-    <button type="submit"><a href= "User/UserDashboard.php">Go to User Dashboard</a></button>
 </body>
 </html>
+ <!--TRUNCATE table my_table;-->

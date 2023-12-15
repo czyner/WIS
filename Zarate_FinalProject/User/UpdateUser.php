@@ -6,8 +6,13 @@
     
   </head>
   <body data-new-gr-c-s-check-loaded="14.1086.0" data-gr-ext-installed="">
-    <!-- START NAV -->   
-   <?php 
+  <button type="submit"><a href= "UserDashboard.php">Go Back</a></button>
+  <form id="update_user" class="input-group" action="UpdateUser.php" method="get">
+    New Username: <input type="text" name="new_name"  id="new_name" class="input-field" placeholder="Username" required> <br>
+    User ID: <input type="number" name="enter_id" id="enter_id" class="input-field" placeholder="User ID" required> <br>
+    <button type="submit">Update</button>
+    </form>
+    <?php
         $servername = "localhost"; 
         $username = "root"; 
         $password = ""; 
@@ -21,19 +26,24 @@
             die("Connection failed: " . $conn->connect_error);
         }
         $retval = mysqli_select_db( $conn, 'Zarate' );
-
         // Select data
-        $sql = "SELECT UserID, username, email, password FROM users";
+        $sql = "SELECT UserID, Username, Email FROM users";
         $result = $conn->query($sql);
+        
+    // Update data
+    $retval = mysqli_select_db( $conn, 'Zarate' );
+    $newUsername = $_GET['new_name'];
+    $idToUpdate = $_GET['enter_id'];
 
-        if ($result->num_rows > 0) {
-            while($row = $result->fetch_assoc()) {
-                echo "<br> ID: " . $row["UserID"]. " - Username: " . $row["username"]. " - Email: " . $row["email"]. " - Password: " . $row["password"]. "<br>";
-            }
-        } else {
-            echo "0 results";
-        }
+    $sql = "UPDATE users SET Username='$newUsername' WHERE UserID=$idToUpdate";
+
+    if ($conn->query($sql) === TRUE) {
+        echo "Record updated successfully";
+    } else {
+        echo "Error updating record: " . $conn->error;
+    }
+    // Close connection
+    $conn->close();
     ?>
-    <button type="submit"><a href= "UserDashboard.php">Go Back</a></button>
 </body>
 </html>

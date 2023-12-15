@@ -6,8 +6,14 @@
     
   </head>
   <body data-new-gr-c-s-check-loaded="14.1086.0" data-gr-ext-installed="">
-    <!-- START NAV -->   
-   <?php 
+    <p>DELETE USER</p>
+    <button type="submit"><a href= "UserDashboard.php">Go Back</a></button>
+    <form id="delete_user" class="input-group" action="DeleteUser.php" method="POST">
+        User ID: <input type="number" name="delete_id" id="delete_id" class="input-field" placeholder="User ID" required> <br>
+        <button type="submit">Delete</button>
+    </form>
+
+    <?php
         $servername = "localhost"; 
         $username = "root"; 
         $password = ""; 
@@ -21,20 +27,27 @@
             die("Connection failed: " . $conn->connect_error);
         }
         $retval = mysqli_select_db( $conn, 'Zarate' );
+        // Select data
+        $sql = "SELECT UserID, Username, Email FROM users";
+        $result = $conn->query($sql);
 
-        // Insert Into Tables
-        $id = rand(100000,999999);
-        $name = $_POST['Username'];
-        $email = $_POST['SignupEmail'];
-        $password = $_POST['SignupPassword'];
-        
-        $sql = "INSERT INTO users (UserID, username, email, Password) VALUES ('$id', '$name', '$email', '$password')";
-        if ($conn->query($sql) === TRUE) {
-            echo "Account created successfully";
-        } else {
-            echo "Error: " . $sql . "<br>" . $conn->error;
-        }
+    // Delete data
+    $retval = mysqli_select_db( $conn, 'Zarate' );
+    $idToDelete = $_POST['delete_id'];
+
+    $sql = "DELETE FROM users WHERE UserID=$idToDelete";
+
+    if ($conn->query($sql) === TRUE) {
+        echo "Record deleted successfully";
+    } else {
+        echo "Error deleting record: " . $conn->error;
+    }
+
+    // Close connection
+    $conn->close();
     ?>
-    <button type="submit"><a href= "User/UserDashboard.php">Go to User Dashboard</a></button>
+
+
 </body>
 </html>
+ <!--TRUNCATE table my_table;-->

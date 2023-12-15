@@ -6,6 +6,14 @@
     
   </head>
   <body data-new-gr-c-s-check-loaded="14.1086.0" data-gr-ext-installed="">
+    <p>ADD NEW USER</p>
+    <button type="submit"><a href= "UserDashboard.php">Go Back</a></button>
+    <form id="CreateUser" class="input-group" action="CreateUser.php" method="POST">
+            <input type="text" name="Username" class="input-field" placeholder="Username" required></input>
+            <input type="email" name="SignupEmail" class="input-field" placeholder="Email" required></input>
+            <input type="text" name="SignupPassword" class="input-field" placeholder="Password" required></input>
+            <button type="submit">Add User Account</a></button>
+    </form>
     <!-- START NAV -->   
    <?php 
         $servername = "localhost"; 
@@ -35,15 +43,9 @@
         } else {
             echo "Error: " . $sql . "<br>" . $conn->error;
         }
+        // Close connection
+        $conn->close();
     ?>
-    <button type="submit"><a href= "UserDashboard.php">Go Back</a></button>
-
-    <form id="CreateUser" class="input-group" action="SignupAfterSubmit.php" method="POST">
-            <input type="text" name="Username" class="input-field" placeholder="Username" required></input>
-            <input type="email" name="SignupEmail" class="input-field" placeholder="Email" required></input>
-            <input type="text" name="SignupPassword" class="input-field" placeholder="Password" required></input>
-            <button type="submit" class="SubmitBtn"><a href="SignupAfterSubmit.php">Add User Account</a></button>
-    </form>
    
 </body>
 </html>
