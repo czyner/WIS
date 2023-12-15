@@ -34,26 +34,21 @@
             <button type="button" class="toggle-btn" onclick="userLogin()"><strong>Login</strong></button>
             <button type="button" class="toggle-btn" onclick="userSignup()"><strong>Signup</strong></button>
         </div>
-        <form id="userLogin" class="input-group" action="setup.php" method="POST"><a href="UserDashboard.php">
-            <input type="email" name="LoginEmail" class="input-field" placeholder="Email" required></input>
-            <input type="text"  name="LoginPassword" class="input-field" placeholder="Password" required></input>
-            <button type="submit" class="userLoginSubmitBtn"><a href="UserDashboard.php">Login</a></button>
-        <div class="login">
-
-        </div></a>
-        </form>
-        <form id="userSignup" class="input-group" action="setup.php" method="POST"><a href="UserDashboard.php">
+        <form id="userSignup" class="input-group" action="SignupAfterSubmit.php" method="POST">
             <input type="text" name="Username" class="input-field" placeholder="Username" required></input>
             <input type="email" name="SignupEmail" class="input-field" placeholder="Email" required></input>
             <input type="text" name="SignupPassword" class="input-field" placeholder="Password" required></input>
-            <button type="submit" class="userSignupSubmitBtn"><a href="UserDashboard.php">Signup</a></button>
-        <div class="login">
-
-        </div></a>
+            <button type="submit" class="userSignupSubmitBtn"><a href="SignupAfterSubmit.php">Signup</a></button>
         </form>
+        <form id="userLogin" class="input-group" action="setup.php" method="POST">
+            <!--<input type="email" name="LoginEmail" class="input-field" placeholder="Email" required></input>
+            <input type="text"  name="LoginPassword" class="input-field" placeholder="Password" required></input>
+            <button type="submit" class="userLoginSubmitBtn"><a href="UserDashboard.php">Login</a></button>-->
+        </form> 
     </div>
 
     <script>
+        //header('Location: UserDashboard.php');
         var x = document.getElementById("userLogin");
         var y = document.getElementById("userSignup");
         var z = document.getElementById("btn");

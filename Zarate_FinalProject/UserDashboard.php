@@ -8,10 +8,25 @@
   </head>
   <body>
     <p>Student Information System - User</p>
-    <button type="submit"><a href= "Users.html">View Users</a></button>
-    <button type="submit"><a href= "Student.html">Student</a></button>
-    <button type="submit"><a href= "Course.html">Course</a></button>
-    <button type="submit"><a href= "Instrutor.html">Instructor</a></button>
-    <button type="submit"><a href= "Enrollment.html">Enrollment</a></button>
+
+    <div class="UserFeatureButtons">
+      <button type="submit"><a href= "CreateUser.php">Add User</a></button>
+      <button type="submit"><a href= "ReadUsers.php">View Users</a></button>
+      <button type="submit"><a href= "UpdateUser.php">Edit User</a></button>
+      <button type="submit"><a href= "DeleteUser.php">Delete User</a></button>
+    </div>
+
+    <div class="StudentFeatureButtons">
+
+    </div>
+
+    <div class="CourseFeatureButtons">
+
+    </div>
+
+    <div class="InstructorFeatureButtons">
+
+    </div>  
+    
   </body>
 </html>
