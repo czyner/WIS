@@ -6,11 +6,11 @@
     
   </head>
   <body data-new-gr-c-s-check-loaded="14.1086.0" data-gr-ext-installed="">
-  <button type="submit"><a href= "UserDashboard.php">Go Back</a></button>
-  <form id="update_user" class="input-group" action="UpdateUser.php" method="POST">
-    New Username: <input type="text" name="new_name"  id="new_name" class="input-field" placeholder="Username" required> <br>
-    User ID: <input type="number" name="enter_id" id="enter_id" class="input-field" placeholder="User ID" required> <br>
-    <button type="submit">Update</button>
+    <p><br>DELETE COURSE INFO</p>
+    <button type="submit"><a href= "../User/UserDashboard.php">Go Back</a></button>
+    <form id="delete_course" class="input-group" action="DeleteCourse.php" method="POST">
+        User ID: <input type="number" name="delete_id" id="enter_id" class="input-field" placeholder="Course ID" required> <br>
+        <button type="submit">Delete</a></button>
     </form>
     <?php
         $servername = "localhost"; 
@@ -27,23 +27,25 @@
         }
         $retval = mysqli_select_db( $conn, 'Zarate' );
         // Select data
-        $sql = "SELECT UserID, Username, Email FROM users";
+        $sql = "SELECT CourseID, CourseName, Credits FROM Course";
         $result = $conn->query($sql);
-        
-    // Update data
-    $retval = mysqli_select_db( $conn, 'Zarate' );
-    $newUsername = $_POST['new_name'];
-    $idToUpdate = $_POST['enter_id'];
 
-    $sql = "UPDATE users SET Username='$newUsername' WHERE UserID=$idToUpdate";
+    // Delete data
+    $idToDelete = $_POST['delete_id'];
+
+    $sql = "DELETE FROM Course WHERE CourseID=$idToDelete";
 
     if ($conn->query($sql) === TRUE) {
-        echo "Record updated successfully";
+        echo "Record deleted successfully";
     } else {
-        echo "Error updating record: " . $conn->error;
+        echo "Error deleting record: " . $conn->error;
     }
+
     // Close connection
     $conn->close();
     ?>
+
+
 </body>
 </html>
+ <!--TRUNCATE table my_table;-->
