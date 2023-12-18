@@ -7,7 +7,7 @@
   </head>
   <body data-new-gr-c-s-check-loaded="14.1086.0" data-gr-ext-installed="">
   <p>UPDATE STUDENT INFO</p>
-  <button type="submit"><a href= "../User/UserDashboard.php">Go Back</a></button>
+  <button type="submit"><a href= "../UserDashboard.php">Go Back</a></button>
     <form id="update_student" class="input-group" action="UpdateStudent.php" method="POST">
         Student ID: <input type="number" name="enter_id" id="enter_id" class="input-field" placeholder="Student ID" required> <br>
         Update Firstname: <input type="text" name="firstname"  id="firstname" class="input-field" placeholder="Firstname"> <br>

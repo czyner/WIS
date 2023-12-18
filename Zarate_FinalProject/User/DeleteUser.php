@@ -7,7 +7,7 @@
   </head>
   <body data-new-gr-c-s-check-loaded="14.1086.0" data-gr-ext-installed="">
     <p>DELETE USER</p>
-    <button type="submit"><a href= "UserDashboard.php">Go Back</a></button>
+    <button type="submit"><a href= "../UserDashboard.php">Go Back</a></button>
     <form id="delete_user" class="input-group" action="DeleteUser.php" method="POST">
         User ID: <input type="number" name="delete_id" id="delete_id" class="input-field" placeholder="User ID" required> <br>
         <button type="submit">Delete</button>

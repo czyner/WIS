@@ -7,7 +7,7 @@
   </head>
   <body data-new-gr-c-s-check-loaded="14.1086.0" data-gr-ext-installed="">
     <p>ADD NEW COURSE</p>
-    <button type="submit"><a href= "../User/UserDashboard.php">Back</a></button>
+    <button type="submit"><a href= "../UserDashboard.php">Back</a></button>
     <form id="add_course" class="input-group" action="CreateCourse.php" method="POST">
         Course Name: <input type="text" name="course_name"  id="course_name" class="input-field" placeholder="Course name" required> <br>
         Credits: <input type="text" name="credits"  id="credits" class="input-field" placeholder="Credits" required> <br>

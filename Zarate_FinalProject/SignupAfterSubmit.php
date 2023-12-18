@@ -35,6 +35,6 @@
             echo "Error: " . $sql . "<br>" . $conn->error;
         }
     ?>
-    <button type="submit"><a href= "User/UserDashboard.php">Go to User Dashboard</a></button>
+    <button type="submit"><a href= "UserDashboard.php">Go to User Dashboard</a></button>
 </body>
 </html>

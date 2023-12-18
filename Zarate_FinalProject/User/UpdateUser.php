@@ -6,7 +6,7 @@
     
   </head>
   <body data-new-gr-c-s-check-loaded="14.1086.0" data-gr-ext-installed="">
-  <button type="submit"><a href= "UserDashboard.php">Go Back</a></button>
+  <button type="submit"><a href= "../UserDashboard.php">Go Back</a></button>
   <form id="update_user" class="input-group" action="UpdateUser.php" method="POST">
     New Username: <input type="text" name="new_name"  id="new_name" class="input-field" placeholder="Username" required> <br>
     User ID: <input type="number" name="enter_id" id="enter_id" class="input-field" placeholder="User ID" required> <br>

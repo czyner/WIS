@@ -7,7 +7,7 @@
   </head>
   <body data-new-gr-c-s-check-loaded="14.1086.0" data-gr-ext-installed="">
   <p>VIEW COURSES</p>
-  <button type="submit"><a href= "../User/UserDashboard.php">Back</a></button>
+  <button type="submit"><a href= "../UserDashboard.php">Back</a></button>
 <?php
         $servername = "localhost"; 
         $username = "root"; 

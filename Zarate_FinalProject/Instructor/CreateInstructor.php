@@ -7,7 +7,7 @@
   </head>
   <body data-new-gr-c-s-check-loaded="14.1086.0" data-gr-ext-installed="">
     <p>ADD NEW INSTRUCTOR</p>
-    <button type="submit"><a href= "../User/UserDashboard.php">Go Back</a></button>
+    <button type="submit"><a href= "../UserDashboard.php">Go Back</a></button>
     <form id="add_instructor" class="input-group" action="CreateInstructor.php" method="POST">
         Firstname: <input type="text" name="firstname"  id="firstname" class="input-field" placeholder="Firstname" required> <br>
         Lastname: <input type="text" name="lastname"  id="lastname" class="input-field" placeholder="Lastname" required> <br>

@@ -7,7 +7,7 @@
   </head>
   <body data-new-gr-c-s-check-loaded="14.1086.0" data-gr-ext-installed="">
     <p>ADD NEW USER</p>
-    <button type="submit"><a href= "UserDashboard.php">Go Back</a></button>
+    <button type="submit"><a href= "../UserDashboard.php">Go Back</a></button>
     <form id="CreateUser" class="input-group" action="CreateUser.php" method="POST">
             <input type="text" name="Username" class="input-field" placeholder="Username" required></input>
             <input type="email" name="SignupEmail" class="input-field" placeholder="Email" required></input>

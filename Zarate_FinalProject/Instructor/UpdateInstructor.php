@@ -7,8 +7,8 @@
   </head>
   <body data-new-gr-c-s-check-loaded="14.1086.0" data-gr-ext-installed="">
     <p>UPDATE INSTRUCTOR INFORMATION</p>
-    <button type="submit"><a href= "Instructor.html">Back</a></button>
-    <form id="update_instructor" class="input-group" action="Instructor_Update.php" method="POST">
+    <button type="submit"><a href= "../UserDashboard.php">Back</a></button>
+    <form id="update_instructor" class="input-group" action="UpdateInstructor.php" method="POST">
         Instructor ID: <input type="number" name="enter_id" id="enter_id" class="input-field" placeholder="Instructor ID" required> <br>
         Update Firstname: <input type="text" name="firstname"  id="firstname" class="input-field" placeholder="Firstname" > <br>
         Update Lastname: <input type="text" name="lastname"  id="lastname" class="input-field" placeholder="Lastname" > <br>
