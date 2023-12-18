@@ -7,14 +7,12 @@
     
   </head>
   <body data-new-gr-c-s-check-loaded="14.1086.0" data-gr-ext-installed="">
-
-    <!-- START WELCOME SECTION -->
     <div class="bg-image"></div>
     <div class="bg-text">
         <h1>Student Information System <br>A platform where you can manage data at ease.</h1>
 
     </div>
-    <!-- END WELCOME SECTION -->
+
     <div class="form-box">
         <div class="button-box">
             <div id="btn"></div>
@@ -40,7 +38,6 @@
     </div>
 
     <script>
-        //header('Location: UserDashboard.php');
         var x = document.getElementById("userLogin");
         var y = document.getElementById("userSignup");
         var z = document.getElementById("btn");

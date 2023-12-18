@@ -46,7 +46,7 @@ body {
   font-size: 1.8rem;
   font-weight: 400;
   line-height: 1.4;
-  background: #024579;
+  background: #eff1f3;
 }
 h1, h2{
 font-family: 'Raleway', sans-serif;
@@ -136,8 +136,8 @@ width: 80%;
 text-align: center;
 padding: 20px;
 }
-/*Login Sign Up Section*/
 
+/*Login Sign Up Section*/
 .form-box{
   height: 450px;
   width: 380px;
@@ -198,7 +198,7 @@ padding: 20px;
   outline: none;
   background: transparent;
 }
-.userLoginSubmitBtn, .userSignupSubmitBtn {
+.userSignupSubmitBtn, .userLoginSubmitBtn{
   width: 85%;
   padding: 10px 30px;
   cursor: pointer;
@@ -231,7 +231,7 @@ span{
   text-align: center;
   padding: 10px 0;
 }
-.home, .about-us, .log_in, .lab_acc, .dentist_acc, .userLoginSubmitBtn, .userSignupSubmitBtn {
+.userLoginSubmitBtn, .userSignupSubmitBtn {
   color:white;
   text-decoration: none;
   color: var(--main-white);
