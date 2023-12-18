@@ -7,25 +7,12 @@
     
   </head>
   <body data-new-gr-c-s-check-loaded="14.1086.0" data-gr-ext-installed="">
-    <!-- START NAV -->
-
-    <nav id="navbar" class="nav">
-      <!--<h2 id="logo">Logo</h2>-->
-      <ul class="nav-list-left">
-        <li><a href="SISHome.html" class="home">Home</a></li>
-
-      <ul class="nav-list-right">
-        <li><a href="AboutUs.html" class="about-us">About Us</a></li>
-      </ul>
-    </nav>
-
-    <!-- END NAV -->
 
     <!-- START WELCOME SECTION -->
     <div class="bg-image"></div>
     <div class="bg-text">
-        <h1>Student Information System</h1>
-        <p>A platform where you can manage data at ease.</p>
+        <h1>Student Information System <br>A platform where you can manage data at ease.</h1>
+
     </div>
     <!-- END WELCOME SECTION -->
     <div class="form-box">
@@ -34,17 +21,22 @@
             <button type="button" class="toggle-btn" onclick="userLogin()"><strong>Login</strong></button>
             <button type="button" class="toggle-btn" onclick="userSignup()"><strong>Signup</strong></button>
         </div>
+        <div>
+        <form id="userLogin" class="input-group" action="LoginAfterSubmit.php" method="POST">
+            <input type="text" name="Username" class="input-field" placeholder="Username" required></input>
+            <input type="email" name="SignupEmail" class="input-field" placeholder="Email" required></input>
+            <input type="text" name="SignupPassword" class="input-field" placeholder="Password" required></input>
+            <button type="submit" class="userLoginSubmitBtn">Login</button>
+        </form>
+        </div>
+        <div>
         <form id="userSignup" class="input-group" action="SignupAfterSubmit.php" method="POST">
             <input type="text" name="Username" class="input-field" placeholder="Username" required></input>
             <input type="email" name="SignupEmail" class="input-field" placeholder="Email" required></input>
             <input type="text" name="SignupPassword" class="input-field" placeholder="Password" required></input>
             <button type="submit" class="userSignupSubmitBtn">Signup</button>
         </form>
-        <form id="userLogin" class="input-group" action="setup.php" method="POST">
-            <!--<input type="email" name="LoginEmail" class="input-field" placeholder="Email" required></input>
-            <input type="text"  name="LoginPassword" class="input-field" placeholder="Password" required></input>
-            <button type="submit" class="userLoginSubmitBtn"><a href="UserDashboard.php">Login</a></button>-->
-        </form> 
+        </div>
     </div>
 
     <script>
