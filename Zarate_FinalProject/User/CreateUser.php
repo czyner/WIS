@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html><head>
+    <link rel="stylesheet" href="User.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,400&amp;display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway:700&amp;display=swap" rel="stylesheet">
@@ -14,7 +15,7 @@
             <input type="text" name="SignupPassword" class="input-field" placeholder="Password" required></input>
             <button type="submit">Add User Account</a></button>
     </form>
-    <!-- START NAV -->   
+ 
    <?php 
         $servername = "localhost"; 
         $username = "root"; 
