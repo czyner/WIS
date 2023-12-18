@@ -40,7 +40,7 @@
     } else {
         echo "Error deleting record: " . $conn->error;
     }
-
+?>
 </body>
 </html>
  <!--TRUNCATE table my_table;-->

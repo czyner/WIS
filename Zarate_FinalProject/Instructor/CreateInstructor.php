@@ -46,6 +46,8 @@
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     } 
+
+?>
 </body>
 </html>
  <!--TRUNCATE table my_table;-->
