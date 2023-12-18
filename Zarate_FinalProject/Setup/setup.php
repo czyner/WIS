@@ -32,7 +32,7 @@ if ($conn->query($sql) === FALSE) {
 }
 
 //Student
-$sql = "CREATE TABLE Student (
+$sql = "CREATE TABLE IF NOT EXISTS Student (
   StudentID int Primary Key, 
   Firstname varchar(255),
   Lastname varchar(255),
@@ -45,7 +45,7 @@ $sql = "CREATE TABLE Student (
   } 
 
 //Course
-$sql = "CREATE TABLE Course (
+$sql = "CREATE TABLE IF NOT EXISTS Course (
   CourseID INT Primary Key,
   CourseName varchar(255),
   Credits varchar(255))";
@@ -57,7 +57,7 @@ $sql = "CREATE TABLE Course (
   }
 
 //Instructor
-$sql = "CREATE TABLE Instructor (
+$sql = "CREATE TABLE IF NOT EXISTS Instructor (
   InstructorID int Primary Key,
   Firstname varchar(255),
   Lastname varchar(255),
@@ -71,7 +71,7 @@ $sql = "CREATE TABLE Instructor (
   }
 
   //Enrollment
-$sql = "CREATE TABLE Enrollment (
+$sql = "CREATE TABLE IF NOT EXISTS Enrollment (
     EnrollmentID int Primary Key,
     StudentID int,
     CourseID int,

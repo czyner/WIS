@@ -1,4 +1,3 @@
-<php echo setup.php?>
 <!DOCTYPE html>
 <html><head>
     <link rel="stylesheet" href="Zarate_FinalProject.css">
